@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.dao.CommentDao">
+
+    <!-- 添加评论 -->
+    <insert id="addComment" parameterType="example.models.Comment">
+        INSERT INTO comment (id, user_id, course_id, content, rating, created_at)
+        VALUES (#{id}, #{user_id}, #{course_id}, #{content}, #{rating}, #{created_at})
+    </insert>
+
+    <!-- 更新评论 -->
+    <update id="updateComment" parameterType="example.models.Comment">
+        UPDATE comment
+        SET user_id = #{user_id}, course_id = #{course_id}, content = #{content},
+            rating = #{rating}, created_at = #{created_at}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除评论 -->
+    <delete id="deleteComment" parameterType="int">
+        DELETE FROM comment WHERE id = #{id}
+    </delete>
+
+    <!-- 根据ID获取评论 -->
+    <select id="getCommentById" parameterType="int" resultType="example.models.Comment">
+        SELECT * FROM comment WHERE id = #{id}
+    </select>
+
+    <!-- 获取所有评论 -->
+    <select id="getAllComments" resultType="example.models.Comment">
+        SELECT * FROM comment
+    </select>
+
+</mapper>

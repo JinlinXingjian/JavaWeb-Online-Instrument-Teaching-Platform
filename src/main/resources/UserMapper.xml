@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.dao.UserDao">
+
+    <!-- 定义查询所有用户的 SQL -->
+    <select id="getAllUsers" resultType="example.models.User">
+        SELECT * FROM User
+    </select>
+
+
+    <!-- 定义根据邮箱查询用户的 SQL -->
+    <select id="getUserByEmail" parameterType="String" resultType="example.models.User" flushCache="true">
+        SELECT * FROM User WHERE Email = #{Email}
+    </select>
+
+    <!-- 定义根据用户名查询用户的 SQL -->
+    <select id="getUserByUsername" parameterType="String" resultType="example.models.User" flushCache="true">
+        SELECT * FROM User WHERE username = #{username}
+    </select>
+
+    <!-- 定义根据id查询用户的 SQL -->
+    <select id="getUserById" parameterType="int" resultType="example.models.User" flushCache="true">
+        SELECT * FROM User WHERE id = #{id}
+    </select>
+
+    <!-- 定义添加用户的 SQL -->
+    <insert id="addUser" parameterType="example.models.User">
+        INSERT INTO User (username, password, email, role, status, avatar)
+        VALUES (#{username}, #{password}, #{email}, #{role}, #{status}, #{avatar})
+    </insert>
+
+    <!-- 定义更新用户的 SQL -->
+    <update id="updateUser" parameterType="example.models.User">
+        UPDATE User SET
+                        username = #{username},
+                        password = #{password},
+                        email = #{email},
+                        role = #{role},
+                        status = #{status},
+                        avatar = #{avatar}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 定义删除用户的 SQL -->
+    <delete id="deleteCourseLearnByUserId">
+        DELETE FROM CourseLearn
+        WHERE user_id = #{userId}
+    </delete>
+
+    <delete id="deleteUserSetNull">
+        UPDATE Comment
+        SET user_id = NULL
+        WHERE user_id = #{userId}
+    </delete>
+
+    <delete id="deleteUser">
+        DELETE FROM User
+        WHERE id = #{userId}
+    </delete>
+
+
+
+
+
+</mapper>

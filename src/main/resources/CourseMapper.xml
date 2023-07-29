@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.dao.CourseDao">
+
+    <!-- 添加课程 -->
+    <insert id="addCourse" parameterType="example.models.Course">
+        INSERT INTO course (id, title, instrument, difficulty, teacher, description, status, img_url)
+        VALUES (#{id}, #{title}, #{instrument}, #{difficulty}, #{teacher}, #{description}, #{status}, #{imgUrl})
+    </insert>
+
+    <!-- 更新课程 -->
+    <update id="updateCourse" parameterType="example.models.Course">
+        UPDATE course
+        SET title = #{title}, instrument = #{instrument}, difficulty = #{difficulty},
+            teacher = #{teacher}, description = #{description}, status = #{status}, img_url = #{img_url}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除课程 -->
+    <delete id="deleteCourse" parameterType="int">
+        DELETE FROM course WHERE id = #{id}
+    </delete>
+
+    <!-- 根据ID获取课程 -->
+    <select id="getCourseById" parameterType="int" resultType="example.models.Course">
+        SELECT * FROM course WHERE id = #{id}
+    </select>
+
+    <!-- 获取所有课程 -->
+    <select id="getAllCourses" resultType="example.models.Course">
+        SELECT * FROM course
+    </select>
+
+    <!-- 根据条件查询课程 -->
+    <select id="getCoursesByCondition" parameterType="example.models.Course" resultType="example.models.Course">
+        SELECT * FROM course
+        WHERE
+        <if test="title != null">title LIKE CONCAT('%', #{title}, '%')</if>
+        <if test="instrument != null">AND instrument = #{instrument}</if>
+        <if test="difficulty != null">AND difficulty = #{difficulty}</if>
+        <if test="teacher != null">AND teacher = #{teacher}</if>
+        <if test="status != null">AND status = #{status}</if>
+    </select>
+
+</mapper>

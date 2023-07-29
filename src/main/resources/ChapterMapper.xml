@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.dao.ChapterDao">
+
+    <!-- 添加章节 -->
+    <insert id="addChapter" parameterType="example.models.Chapter">
+        INSERT INTO chapters (chapter_name, course_id, chapter_id, video, is_chapter, chapter_small_id)
+        VALUES (#{chapter_name}, #{course_id}, #{chapter_id}, #{video}, #{is_chapter}, #{chapter_small_id})
+    </insert>
+
+    <!-- 更新章节 -->
+    <update id="updateChapter" parameterType="example.models.Chapter">
+        UPDATE chapters
+        SET chapter_name = #{chapter_name}, course_id = #{course_id}, chapter_id = #{chapter_id},
+            video = #{video}, is_chapter = #{is_chapter}, chapter_small_id = #{chapter_small_id}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除章节 -->
+    <delete id="deleteChapter" parameterType="int">
+        DELETE FROM chapters WHERE id = #{id}
+    </delete>
+
+    <!-- 根据ID获取章节 -->
+    <select id="getChapterById" parameterType="int" resultType="example.models.Chapter">
+        SELECT * FROM chapters WHERE id = #{id}
+    </select>
+
+    <!-- 根据CourseID获取章节 -->
+    <select id="getChapterByCourseId" parameterType="int" resultType="example.models.Chapter">
+        SELECT * FROM chapters WHERE course_id = #{id}
+    </select>
+
+    <!-- 获取所有章节 -->
+    <select id="getAllChapters" resultType="example.models.Chapter">
+        SELECT * FROM chapters
+    </select>
+
+    <!-- 根据条件查询章节 -->
+    <select id="getChaptersByCondition" parameterType="example.models.Chapter" resultType="example.models.Chapter">
+        SELECT * FROM chapters
+        WHERE
+        <if test="chapter_name != null">chapter_name LIKE CONCAT('%', #{chapter_name}, '%')</if>
+        <if test="course_id != null">AND course_id = #{course_id}</if>
+        <if test="chapter_id != null">AND chapter_id = #{chapter_id}</if>
+        <if test="is_chapter != null">AND is_chapter = #{is_chapter}</if>
+    </select>
+
+</mapper>
