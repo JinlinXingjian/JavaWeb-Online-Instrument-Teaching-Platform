@@ -1,7 +1,7 @@
 # Java Web，在线乐器学习平台
 
 前后端分离
-- [x] 前端：vue
+- [x] 前端：vue3,vite,pinia
 - [x] 后端：原生servlet，mybaties，数据库MySQL
 
 
