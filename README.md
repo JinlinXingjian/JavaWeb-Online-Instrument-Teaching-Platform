@@ -29,7 +29,7 @@ l 课程管理：更改所有课程的信息。
 
 ### 登录及功能演示
 
-![image-20230721192927861](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721192927861.png)
+![image-20230730124345926](./img/image-20230730124345926.png)
 
 ![image-20230721192950192](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721192950192.png)
 
