@@ -31,27 +31,25 @@ l 课程管理：更改所有课程的信息。
 
 ![image-20230730124345926](./img/image-20230730124345926.png)
 
-![image-20230721192950192](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721192950192.png)
+![image-20230730124450445](./img/image-20230730124450445.png)
 
 
 
-![image-20230721193008472](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721193008472.png)
+![image-20230730124515767](./img/image-20230730124515767.png)
 
-![image-20230721193022753](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721193022753.png)
-
-![image-20230721193040614](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721193040614.png)
+![image-20230730124538140](./img/image-20230730124538140.png)
 
 ![image-20230721193053257](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721193053257.png)
 
 ![image-20230721193101394](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721193101394.png)
 
-![image-20230721193115847](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721193115847.png)
+![image-20230730124753772](./img/image-20230730124753772.png)
 
-![image-20230721193143871](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721193143871.png)
+![image-20230730124621578](./img/image-20230730124621578.png)
 
-![image-20230721193157150](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721193157150.png)
+![image-20230730124631286](./img/image-20230730124631286.png)
 
-![image-20230721193205188](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721193205188.png)
+![image-20230730124638992](./img/image-20230730124638992.png)
 
 ### 注册
 
@@ -212,11 +210,11 @@ public class UserFindPassword extends HttpServlet {
 
 ### 用户管理模块
 
-![image-20230721193405803](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721193405803.png)
+![image-20230730124657660](./img/image-20230730124657660.png)
 
 ### 课程管理模块
 
-![image-20230721193450018](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721193450018.png)
+![image-20230730124708303](./img/image-20230730124708303.png)
 
 
 
@@ -224,6 +222,6 @@ public class UserFindPassword extends HttpServlet {
 
 
 
-
+![image-20230730124718789](./img/image-20230730124718789.png)
 
 **更多代码请查看源代码**
