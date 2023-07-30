@@ -28,13 +28,11 @@ l 课程管理：更改所有课程的信息。
 
 ### 登录及功能演示
 
-![image-20230721192927861](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721192927861.png)
+![image-20230730121046364](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//Snipaste_2023-07-30_12-12-33.png)
 
-![image-20230721192950192](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721192950192.png)
+<img src="https://typora-1305229676.cos.ap-chengdu.myqcloud.com//Snipaste_2023-07-30_12-23-04.png" alt="image-20230721192950192" style="zoom: 33%;" />
 
-
-
-![image-20230721193008472](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721193008472.png)
+<img src="https://typora-1305229676.cos.ap-chengdu.myqcloud.com//Snipaste_2023-07-30_12-23-27.png" alt="image-20230721193008472" style="zoom:50%;" />
 
 ![image-20230721193022753](https://typora-1305229676.cos.ap-chengdu.myqcloud.com//image-20230721193022753.png)
 
